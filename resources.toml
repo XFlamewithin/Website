@@ -81,7 +81,7 @@ url     = "https://osteoporosis.ca/calcium-calculator/"
 section = "adults"
 topic   = "Breast cancer screening"
 title   = "Screening at ages 40 to 49: what you need to know"
-source  = "Ontario Health (Cancer Care Ontario)"
+source  = "Cancer Care Ontario"
 url     = "https://www.cancercareontario.ca/en/types-of-cancer/breast-cancer/screening/ages-40-49-what-you-need-to-know"
 check   = "off"   # this site blocks automatic checking
 
