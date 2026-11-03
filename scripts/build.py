@@ -81,7 +81,7 @@ footer p{margin:0}
   header.wrap{padding-top:28px}
   h1{font-size:1.6rem}
   .search{max-width:none;margin-left:0;flex-basis:100%}
-  .tabs{width:100%}.tab{flex:1;justify-content:center;padding:.5rem .6rem}
+  .tabs{width:100%}.tab{flex:1;justify-content:center;padding:.5rem .3rem;font-size:.94rem;white-space:nowrap}
   .panel{gap:24px}
   footer .wrap{grid-template-columns:1fr;gap:12px}
 }
@@ -124,9 +124,11 @@ tabs.forEach((b,i)=>{b.onclick=()=>show(b.dataset.t);
 q.addEventListener('input',filter);
 addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}});
 new IntersectionObserver(([e])=>bar.classList.toggle('stuck',!e.isIntersecting)).observe(document.getElementById('top'));
-const fromHash=()=>{const h=location.hash.slice(1);if(panels.some(p=>p.id===h)&&h!==cur)show(h);};
+// Old links to #patients open the adults tab.
+const hashTab=()=>{const h=location.hash.slice(1);return h==='patients'?'adults':h;};
+const fromHash=()=>{const h=hashTab();if(panels.some(p=>p.id===h)&&h!==cur)show(h);};
 addEventListener('hashchange',fromHash);
-const h=location.hash.slice(1);show(panels.some(p=>p.id===h)?h:cur);
+const h=hashTab();show(panels.some(p=>p.id===h)?h:cur);
 })();
 """
 
@@ -172,7 +174,7 @@ def main():
 
     tabs, panels = [], []
     for key, heading in SECTIONS.items():
-        items = [r for r in resources if r["section"] == key]
+        items = [r for r in resources if key in r["sections"]]
         if not items:
             continue
         tabs.append(f'<button class="tab" role="tab" id="tab-{key}" data-t="{key}" aria-controls="{key}">'

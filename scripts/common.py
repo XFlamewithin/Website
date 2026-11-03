@@ -28,7 +28,9 @@ if EXTRA_CERTS.exists():
     SSL_CONTEXT.load_verify_locations(EXTRA_CERTS)
 
 USER_AGENT = "Mozilla/5.0 (compatible; PatientResourceLinkChecker/1.0)"
-SECTIONS = {"patients": "For patients", "clinicians": "For clinicians"}
+SECTIONS = {"adults": "For adults", "children": "For children", "clinicians": "For clinicians"}
+# Shorthand names that put a resource in more than one section.
+SECTION_ALIASES = {"patients": ["adults", "children"]}
 
 # A resource is hidden from the site (or served only from its saved copy)
 # while it has one of these statuses, until it is approved again.
@@ -56,9 +58,15 @@ def load_resources():
         for field in ("section", "topic", "title", "url"):
             if not r.get(field):
                 raise SystemExit(f"resources.toml: resource #{i} is missing '{field}'")
-        if r["section"] not in SECTIONS:
-            raise SystemExit(f"resources.toml: '{r['title']}' has section '{r['section']}' "
-                             f"(must be one of: {', '.join(SECTIONS)})")
+        names = r["section"] if isinstance(r["section"], list) else [r["section"]]
+        r["sections"] = []
+        for name in names:
+            for sec in SECTION_ALIASES.get(name, [name]):
+                if sec not in SECTIONS:
+                    raise SystemExit(f"resources.toml: '{r['title']}' has section '{name}' "
+                                     f"(must be one of: {', '.join([*SECTIONS, *SECTION_ALIASES])})")
+                if sec not in r["sections"]:
+                    r["sections"].append(sec)
         r["id"] = r.get("id") or slugify(r["title"])
         if r["id"] in seen:
             raise SystemExit(f"resources.toml: two resources share the id '{r['id']}' — "

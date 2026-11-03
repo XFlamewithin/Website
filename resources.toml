@@ -7,7 +7,9 @@
 #  [[resource]]. Resources appear on the website in the same order as
 #  in this file, grouped by "section" and then by "topic".
 #
-#    section  – "patients" or "clinicians" (which part of the page)
+#    section  – which tab it appears on: "adults", "children" or
+#               "clinicians". For more than one tab, list them:
+#               section = ["adults", "children"]  ("patients" means both).
 #    topic    – the heading it appears under (e.g. "Osteoporosis").
 #               Resources with the same topic are grouped together.
 #    title    – the text of the link
@@ -35,46 +37,39 @@
 
 
 # ----------------------------------------------------------------------
-#  FOR PATIENTS
+#  FOR ADULTS
 # ----------------------------------------------------------------------
 
 [[resource]]
-section = "patients"
+section = "adults"
 topic   = "Iron deficiency"
 title   = "Iron supplements guide"
 source  = "Association of Ontario Midwives"
 url     = "https://www.ontariomidwives.ca/sites/default/files/IDA-Iron-supplements-guide-for-midwives-2024.pdf"
 
 [[resource]]
-section = "patients"
+section = "adults"
 topic   = "Cholesterol"
 title   = "The Portfolio Diet (infographic)"
 source  = "Canadian Cardiovascular Society"
 url     = "https://ccs.ca/wp-content/uploads/2023/11/Portfolio-Infographic-EN_7Nov2023.pdf"
 
 [[resource]]
-section = "patients"
-topic   = "Constipation in children"
-title   = "Constipation in children over 6 months"
-source  = "CHEO"
-url     = "https://outreach.cheo.on.ca/document/673"
-
-[[resource]]
-section = "patients"
+section = "adults"
 topic   = "Exercises"
 title   = "Knee arthritis exercise program"
 source  = "OrthoInfo (AAOS)"
 url     = "https://www.orthoinfo.org/globalassets/pdfs/2023-rehab_knee_10-16-23.pdf"
 
 [[resource]]
-section = "patients"
+section = "adults"
 topic   = "Exercises"
 title   = "Shoulder (rotator cuff) exercise program"
 source  = "OrthoInfo (AAOS)"
 url     = "https://www.orthoinfo.org/globalassets/pdfs/2017-rehab_shoulder.pdf"
 
 [[resource]]
-section = "patients"
+section = "adults"
 topic   = "Osteoporosis"
 title   = "Calcium calculator"
 source  = "Osteoporosis Canada"
@@ -82,26 +77,39 @@ note    = "Find out how much calcium you get from your diet."
 url     = "https://osteoporosis.ca/calcium-calculator/"
 
 [[resource]]
-section = "patients"
+section = "adults"
 topic   = "Breast cancer screening"
 title   = "Screening at ages 40 to 49: what you need to know"
 source  = "Ontario Health (Cancer Care Ontario)"
 url     = "https://www.cancercareontario.ca/en/types-of-cancer/breast-cancer/screening/ages-40-49-what-you-need-to-know"
 check   = "off"   # this site blocks automatic checking
 
+
+# ----------------------------------------------------------------------
+#  FOR CHILDREN
+# ----------------------------------------------------------------------
+
 [[resource]]
-section = "patients"
+section = "children"
+topic   = "Constipation in children"
+title   = "Constipation in children over 6 months"
+source  = "CHEO"
+url     = "https://outreach.cheo.on.ca/document/673"
+
+[[resource]]
+section = "children"
 topic   = "Fever in Children"
 title   = "Fever"
 source  = "CHEO"
 url     = "https://outreach.cheo.on.ca/document/677"
 
 [[resource]]
-section = "patients"
+section = "children"
 topic   = "Introducing Solids for Infants"
 title   = "Feeding your baby in the first year"
 source  = "Caring for Kids (Canadian Pediatric Society)"
 url     = "https://caringforkids.cps.ca/handouts/healthy-living/feeding_your_baby_in_the_first_year"
+
 
 # ----------------------------------------------------------------------
 #  FOR CLINICIANS
