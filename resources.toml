@@ -91,6 +91,13 @@ title   = "Fever"
 source  = "CHEO"
 url     = "https://outreach.cheo.on.ca/document/677"
 
+[[resource]]
+section = "patients"
+topic   = "Introducing Solids for Infants"
+title   = "Feeding your baby in the first year"
+source  = "Caring for Kids (Canadian Pediatric Society)"
+url     = "https://caringforkids.cps.ca/handouts/healthy-living/feeding_your_baby_in_the_first_year"
+
 # ----------------------------------------------------------------------
 #  FOR CLINICIANS
 # ----------------------------------------------------------------------
@@ -150,6 +157,13 @@ topic   = "Atrial fibrillation"
 title   = "SPARC – stroke and bleeding risk calculator"
 source  = "SPARC"
 url     = "https://www.sparctool.com/"
+
+[[resource]]
+section = "clinicians"
+topic   = "Immunizations"
+title   = "Publicly Funded Immunization Schedules for Ontario"
+source  = "Ministry of Health (Ontario)"
+url     = "https://www.ontario.ca/files/2024-01/moh-publicly-funded-immunization-schedule-en-2024-01-23.pdf"
 
 [[resource]]
 section = "clinicians"
