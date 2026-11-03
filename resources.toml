@@ -83,14 +83,6 @@ url     = "https://osteoporosis.ca/calcium-calculator/"
 
 [[resource]]
 section = "patients"
-topic   = "Immunizations"
-title   = "Ontario's routine immunization schedule (poster)"
-source  = "Ontario Ministry of Health"
-url     = "https://www.ontario.ca/files/2024-01/moh-immunization-poster-lifespan-en-2024-01-18.pdf"
-page    = "https://www.ontario.ca/page/ontarios-routine-immunization-schedule"
-
-[[resource]]
-section = "patients"
 topic   = "Breast cancer screening"
 title   = "Screening at ages 40 to 49: what you need to know"
 source  = "Ontario Health (Cancer Care Ontario)"
