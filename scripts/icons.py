@@ -34,6 +34,13 @@ ICONS = {
                    '<circle cx="19" cy="11" r="2"/>',
     "syringe": '<path d="m17.5 2.5 4 4M19.5 4.5 16 8"/><path d="M18 10 8.5 19.5H4.5v-4L14 6z"/>'
                '<path d="m12 8 1.5 1.5M9.5 10.5 11 12M7 13l1.5 1.5M2.5 21.5l2-2"/>',
+    "thermometer": '<path d="M10 14V5.5a2 2 0 0 1 4 0V14a4 4 0 1 1-4 0z"/><path d="M12 9.5v6"/>'
+                   '<path d="M16.5 6h2M16.5 9h2M16.5 12h2"/>',
+    "intestine": '<path d="M6.5 19.5V8a3.5 3.5 0 0 1 3.5-3.5h4A3.5 3.5 0 0 1 17.5 8v9.5"/><path d="M6.5 19.5h7"/>'
+                 '<path d="M17.5 17.5v4"/><path d="M9.5 9.5h5a1.5 1.5 0 0 1 0 3h-5a1.5 1.5 0 0 0 0 3h5"/>',
+    "poop": '<path d="M4 18.25A2.25 2.25 0 0 1 6.25 16h11.5a2.25 2.25 0 0 1 0 4.5H6.25A2.25 2.25 0 0 1 4 18.25z"/>'
+            '<path d="M7.5 16a2.25 2.25 0 0 1 .75-4.5h7.5a2.25 2.25 0 0 1 .75 4.5"/>'
+            '<path d="M9.5 11.5a2.2 2.2 0 0 1 1-4.3h1.2c1.3 0 2-1.4 1.3-3.7 2.4.8 3.4 2.6 2.9 4.6a2.1 2.1 0 0 1-1.4 3.4"/>',
     "document": '<path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5v4h4M10 12h5M10 15.5h5"/>',
 }
 
@@ -44,6 +51,9 @@ KEYWORDS = [
     (("dyslipid", "cardiovascular", "cvd", "blood pressure", "hypertension"), "heart-pulse"),
     (("cholesterol", "lipid", "heart"), "heart"),
     (("iron", "anemia", "anaemia", "blood", "diabetes", "glucose"), "drop"),
+    (("fever", "temperature"), "thermometer"),
+    (("constipat", "bowel", "stool", "poop", "diarrh"), "poop"),
+    (("stomach", "abdominal", "gut", "colic"), "intestine"),
     (("diet", "nutrition", "food", "feeding", "solids", "weight"), "apple"),
     (("child", "kid", "infant", "baby", "pediatric", "paediatric"), "child"),
     (("osteo", "bone", "fracture"), "bone"),

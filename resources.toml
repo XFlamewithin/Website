@@ -27,7 +27,8 @@
 #               Chosen automatically from the topic name; set it on any
 #               one resource in a topic to override. Choices: drop, heart,
 #               heart-pulse, pulse, child, dumbbell, bone, ribbon, pill,
-#               apple, lungs, brain, stethoscope, syringe, document
+#               apple, lungs, brain, stethoscope, syringe, thermometer,
+#               intestine, poop, document
 #    id       – (optional) a short unique name. If left out it is made
 #               from the title. Used for saved copies and approvals.
 #
