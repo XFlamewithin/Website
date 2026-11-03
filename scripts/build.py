@@ -6,6 +6,7 @@
 import shutil
 from html import escape
 
+from icons import topic_icon
 from common import (PAUSED, ROOT, SECTIONS, copy_path, load_resources, load_site,
                     load_status)
 
@@ -56,7 +57,8 @@ h1{font:600 2rem/1.1 var(--serif);letter-spacing:-.02em;margin:0}
 main.wrap{padding-top:20px;padding-bottom:56px}
 .panel{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:36px 48px;align-items:start}
 .panel[hidden]{display:none}
-.group h2{font:600 1.2rem/1.25 var(--serif);letter-spacing:-.01em;margin:0 0 8px}
+.group h2{font:600 1.2rem/1.25 var(--serif);letter-spacing:-.01em;margin:0 0 8px;display:flex;align-items:flex-start;gap:.6rem}
+.ic{width:26px;height:26px;margin-top:-1px;flex:none;color:var(--accent);fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 ul{list-style:none;margin:0;padding:0}
 li{padding:7px 0}
 a{color:var(--accent)}
@@ -123,6 +125,8 @@ tabs.forEach((b,i)=>{b.onclick=()=>show(b.dataset.t);
 q.addEventListener('input',filter);
 addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}});
 new IntersectionObserver(([e])=>bar.classList.toggle('stuck',!e.isIntersecting)).observe(document.getElementById('top'));
+const fromHash=()=>{const h=location.hash.slice(1);if(panels.some(p=>p.id===h)&&h!==cur)show(h);};
+addEventListener('hashchange',fromHash);
 const h=location.hash.slice(1);show(panels.some(p=>p.id===h)?h:cur);
 })();
 """
@@ -176,9 +180,10 @@ def main():
                     f'<span class="l">{heading}</span><span class="n">{len(items)}</span></button>')
         groups = []
         for i, topic in enumerate(dict.fromkeys(r["topic"] for r in items)):
-            lis = "".join(item_html(r, status.get(r["id"], {}), files_used)
-                          for r in items if r["topic"] == topic)
-            groups.append(f'<section class="group" style="--i:{min(i, 12)}"><h2>{escape(topic)}</h2><ul>{lis}</ul></section>')
+            in_topic = [r for r in items if r["topic"] == topic]
+            lis = "".join(item_html(r, status.get(r["id"], {}), files_used) for r in in_topic)
+            groups.append(f'<section class="group" style="--i:{min(i, 12)}">'
+                          f'<h2>{topic_icon(topic, in_topic)}{escape(topic)}</h2><ul>{lis}</ul></section>')
         panels.append(f'<div class="panel" id="{key}" role="tabpanel" aria-labelledby="tab-{key}">{"".join(groups)}</div>')
 
     checked = [e["last_checked"] for e in status.values() if e.get("last_checked")]

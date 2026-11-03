@@ -16,6 +16,11 @@
 #    note     – (optional) a short line of extra explanation
 #    check    – (optional) "auto" (default) or "off". Use "off" for
 #               websites that block automatic checking.
+#    icon     – (optional) the small picture beside the topic heading.
+#               Chosen automatically from the topic name; set it on any
+#               one resource in a topic to override. Choices: drop, heart,
+#               heart-pulse, pulse, child, dumbbell, bone, ribbon, pill,
+#               apple, lungs, brain, stethoscope, document
 #    id       – (optional) a short unique name. If left out it is made
 #               from the title. Used for saved copies and approvals.
 #
