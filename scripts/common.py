@@ -8,6 +8,7 @@ import re
 import ssl
 import tomllib
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -35,7 +36,8 @@ PAUSED = {"changed", "broken"}
 
 
 def slugify(text):
-    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:60]
+    text = re.sub(r"['’]", "", text.lower())
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-")[:60]
 
 
 def now():
@@ -135,6 +137,58 @@ def text_diff(old, new, limit=60):
     return "\n".join(lines)
 
 
+def effective_status(entry):
+    """Combine the file's own status with the status of the page it is posted on.
+
+    "withdrawn" means the source page no longer links to the file, so it may
+    be outdated: it is hidden from the site entirely, saved copy included.
+    """
+    page = entry.get("page_status", "ok")
+    if page == "unlisted":
+        return "withdrawn"
+    if entry.get("status") in PAUSED:
+        return entry["status"]
+    if page in ("changed", "broken"):
+        return "changed"
+    return entry.get("status", "unchecked")
+
+
+def _norm(url):
+    u = urllib.parse.urlsplit(url)
+    host = u.netloc.lower().removeprefix("www.")
+    return host, urllib.parse.unquote(u.path).rstrip("/")
+
+
+def links_to(page_body, page_url, target):
+    """True if the page contains a link to the target file."""
+    host, path = _norm(target)
+    filename = path.rsplit("/", 1)[-1].lower()
+    for href in re.findall(r"""href\s*=\s*["']([^"'#]+)""", page_body.decode("utf-8", "replace"), re.I):
+        h, p = _norm(urllib.parse.urljoin(page_url, html.unescape(href.strip())))
+        if (h, p) == (host, path) or (filename.endswith(".pdf") and p.lower().endswith("/" + filename)):
+            return True
+    return False
+
+
+def approve_page(resource, entry):
+    """Record the current version of the page a resource is posted on."""
+    page_url = resource["page"]
+    final_url, ctype, body = fetch(page_url)
+    _, digest, text = fingerprint(ctype, body)
+    entry.update({
+        "page_url": page_url,
+        "page_hash": digest,
+        "page_links": links_to(body, final_url, resource["url"]),
+        "page_status": "ok",
+        "page_fail_count": 0,
+    })
+    entry.pop("pending_page_hash", None)
+    if text is not None:
+        SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+        (SNAPSHOT_DIR / f"{resource['id']}--page.txt").write_text(text, encoding="utf-8")
+    return entry
+
+
 def copy_path(rid):
     return FILES_DIR / f"{rid}.pdf"
 
@@ -163,5 +217,7 @@ def approve(resource, status, keep_copy=False):
     elif text is not None:
         SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
         (SNAPSHOT_DIR / f"{rid}.txt").write_text(text, encoding="utf-8")
+    if resource.get("page"):
+        approve_page(resource, entry)
     status[rid] = entry
     return entry

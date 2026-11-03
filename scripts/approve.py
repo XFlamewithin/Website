@@ -8,7 +8,7 @@
 import argparse
 import sys
 
-from common import PAUSED, approve, load_resources, load_status, save_status
+from common import PAUSED, approve, effective_status, load_resources, load_status, save_status
 import notify
 
 
@@ -22,7 +22,8 @@ def main():
     resources = {r["id"]: r for r in load_resources()}
     status = load_status()
     if args.all_pending:
-        ids = [rid for rid, e in status.items() if e.get("status") in PAUSED and rid in resources]
+        ids = [rid for rid, e in status.items()
+               if effective_status(e) in PAUSED | {"withdrawn"} and rid in resources]
     elif args.id:
         if args.id not in resources:
             sys.exit(f"No resource with id '{args.id}'. Ids: {', '.join(resources)}")

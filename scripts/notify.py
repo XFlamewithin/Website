@@ -20,6 +20,11 @@ HEADINGS = {
     "changed": "Content has changed",
     "broken": "Link appears to be broken (page or file not found)",
     "unreachable": "Could not be checked for several days (still shown on the website)",
+    "page-changed": "The page this resource is posted on has changed",
+    "unlisted": "The page this resource is posted on no longer links to it (it may have been replaced or withdrawn)",
+    "page-broken": "The page this resource is posted on appears to be gone",
+    "page-unreachable": "The page this resource is posted on could not be checked for several days "
+                        "(still shown on the website)",
 }
 
 
@@ -29,14 +34,22 @@ def describe(kind, r, entry, detail):
         "",
         f"Resource id: {r['id']}",
         f"Link:        {r['url']}",
+    ]
+    if r.get("page"):
+        lines.append(f"Posted on:   {r['page']}")
+    lines += [
         f"Approved:    {entry.get('approved_at', 'never')}",
         f"Detected:    {entry.get('last_checked')}",
+        "",
     ]
-    if kind in ("changed", "broken"):
+    if kind == "unlisted":
+        lines.append("This resource is hidden from your website, including your saved copy, "
+                     "until you approve it again.")
+    elif kind in ("changed", "broken", "page-changed", "page-broken"):
         if entry.get("kind") == "pdf":
-            lines += ["", "Your website now links only to your saved (approved) copy of this PDF."]
+            lines.append("Your website now links only to your saved (approved) copy of this PDF.")
         else:
-            lines += ["", "This link is hidden from your website until you approve it again."]
+            lines.append("This link is hidden from your website until you approve it again.")
     if detail:
         lines += ["", "What changed:", detail]
     lines += [
@@ -46,7 +59,8 @@ def describe(kind, r, entry, detail):
         f"  action: approve, resource id: {r['id']}",
         "  (choose 'keep saved copy' if you want to keep your old PDF copy).",
         "",
-        "Or edit the url in resources.toml if you want to point to a different resource.",
+        "If the file was replaced by a newer one, put the new file's address in the url",
+        "line in resources.toml instead. Editing the url or page also counts as approval.",
     ]
     return "\n".join(lines)
 

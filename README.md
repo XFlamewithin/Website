@@ -37,6 +37,14 @@ Every morning GitHub opens each link and compares it with the version you approv
   * **PDFs** keep working, because the site serves your saved, approved copy.
     Only the "original source" link is hidden until you approve.
 * **Link gone (page not found two days in a row):** handled the same way as a change.
+* **Files posted on another page** (for example, a government PDF): add a `page`
+  line to the resource in `resources.toml` with the address of the page that links to it.
+  That page is checked every day too:
+  * If the page changes, you get an email with the changed text, and the resource is
+    paused as above.
+  * If the page **no longer links to the file**, the file has probably been replaced or
+    withdrawn. The resource is then hidden completely, saved copy included, until you
+    approve it or point `url` at the new file.
 * **Site couldn't be reached for 3 days** (outage, or the site blocks automated checks):
   you get one email, and the link stays up.
 

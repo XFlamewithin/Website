@@ -32,6 +32,8 @@ ICONS = {
              '<path d="M12 5.5a2.8 2.8 0 0 1 5 1.3 3 3 0 0 1 2 4.7 3 3 0 0 1-1.2 4.6A2.9 2.9 0 0 1 12 18.5"/>',
     "stethoscope": '<path d="M6 3.5v5a4 4 0 0 0 8 0v-5"/><path d="M10 12.5v2a4.5 4.5 0 0 0 9 0V13"/>'
                    '<circle cx="19" cy="11" r="2"/>',
+    "syringe": '<path d="m17.5 2.5 4 4M19.5 4.5 16 8"/><path d="M18 10 8.5 19.5H4.5v-4L14 6z"/>'
+               '<path d="m12 8 1.5 1.5M9.5 10.5 11 12M7 13l1.5 1.5M2.5 21.5l2-2"/>',
     "document": '<path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5v4h4M10 12h5M10 15.5h5"/>',
 }
 
@@ -42,11 +44,12 @@ KEYWORDS = [
     (("dyslipid", "cardiovascular", "cvd", "blood pressure", "hypertension"), "heart-pulse"),
     (("cholesterol", "lipid", "heart"), "heart"),
     (("iron", "anemia", "anaemia", "blood", "diabetes", "glucose"), "drop"),
+    (("diet", "nutrition", "food", "feeding", "solids", "weight"), "apple"),
     (("child", "kid", "infant", "baby", "pediatric", "paediatric"), "child"),
     (("osteo", "bone", "fracture"), "bone"),
     (("exercise", "rehab", "physio", "arthritis", "knee", "shoulder", "back pain", "fitness"), "dumbbell"),
+    (("immuniz", "immunis", "vaccin", "shot"), "syringe"),
     (("anticoag", "warfarin", "doac", "medication", "drug", "prescri"), "pill"),
-    (("diet", "nutrition", "food", "weight"), "apple"),
     (("asthma", "copd", "lung", "breath", "smok"), "lungs"),
     (("mental", "anxiety", "depress", "sleep", "brain", "memory", "dementia", "headache"), "brain"),
 ]

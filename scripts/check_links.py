@@ -5,15 +5,20 @@ For every resource in resources.toml:
     automatically, and a saved copy of any PDF is stored in files/;
   * existing resources are compared with the approved version. If the content
     changed, or the link is gone, the resource is paused on the website and a
-    notification is sent (email and/or GitHub issue) asking for re-approval.
+    notification is sent (email and/or GitHub issue) asking for re-approval;
+  * resources with a "page" (the web page a file is posted on) also have that
+    page checked. If it changes, the resource is paused the same way; if it no
+    longer links to the file at all, the file may be outdated, so the resource
+    is hidden completely (saved copy included) until it is approved again.
 
 Run locally with:  python3 scripts/check_links.py
 """
 
 import sys
 
-from common import (PAUSED, SNAPSHOT_DIR, FetchError, approve, fetch, fingerprint,
-                    load_resources, load_status, now, save_status, text_diff)
+from common import (PAUSED, SNAPSHOT_DIR, FetchError, approve, approve_page, fetch,
+                    fingerprint, links_to, load_resources, load_status, now, save_status,
+                    text_diff)
 import notify
 
 BROKEN_AFTER = 2       # a 404 / unknown host must repeat on this many daily checks
@@ -21,6 +26,74 @@ UNREACHABLE_AFTER = 3  # other errors (blocked, timeouts, server errors) before 
 
 
 def check_one(r, status, events):
+    check_file(r, status, events)
+    entry = status.get(r["id"], {})
+    if r.get("page") and "approved_hash" in entry:
+        check_page(r, entry, events)
+
+
+def check_page(r, entry, events):
+    rid = r["id"]
+    if entry.get("page_url") != r["page"]:
+        # The page was just added or edited in resources.toml: that counts as approval.
+        try:
+            approve_page(r, entry)
+            note = "" if entry["page_links"] else " (note: it does not link to the file directly)"
+            print(f"  NEW PAGE {rid}: approved current version{note}")
+        except FetchError as e:
+            print(f"  NEW PAGE {rid}: could not fetch ({e}) — will retry tomorrow")
+        return
+
+    try:
+        final_url, ctype, body = fetch(r["page"])
+    except FetchError as e:
+        entry["page_fail_count"] = entry.get("page_fail_count", 0) + 1
+        print(f"  ERROR    {rid} (source page): {e} (attempt {entry['page_fail_count']})")
+        if entry["page_status"] != "ok":
+            return
+        if e.permanent and entry["page_fail_count"] >= BROKEN_AFTER:
+            entry["page_status"] = "broken"
+            events.append(("page-broken", r, entry, str(e)))
+        elif not e.permanent and entry["page_fail_count"] >= UNREACHABLE_AFTER:
+            entry["page_status"] = "unreachable"
+            events.append(("page-unreachable", r, entry, str(e)))
+        return
+
+    entry["page_fail_count"] = 0
+    _, digest, text = fingerprint(ctype, body)
+    still_linked = links_to(body, final_url, r["url"])
+
+    if entry["page_links"] and not still_linked:
+        if entry["page_status"] != "unlisted":
+            entry["page_status"] = "unlisted"
+            entry["pending_page_hash"] = digest
+            print(f"  UNLISTED {rid}: source page no longer links to the file")
+            events.append(("unlisted", r, entry, page_diff(rid, text)))
+        return
+
+    if digest == entry["page_hash"]:
+        print(f"  OK       {rid} (source page)")
+        entry["page_status"] = "ok"
+        entry.pop("pending_page_hash", None)
+        return
+
+    if entry.get("pending_page_hash") == digest:
+        print(f"  CHANGED  {rid} (source page): still awaiting approval")
+        return
+    entry["page_status"] = "changed"
+    entry["pending_page_hash"] = digest
+    print(f"  CHANGED  {rid} (source page)")
+    events.append(("page-changed", r, entry, page_diff(rid, text)))
+
+
+def page_diff(rid, text):
+    snap = SNAPSHOT_DIR / f"{rid}--page.txt"
+    if text is None or not snap.exists():
+        return ""
+    return text_diff(snap.read_text(encoding="utf-8"), text)
+
+
+def check_file(r, status, events):
     rid = r["id"]
     entry = status.get(rid)
 
@@ -28,7 +101,8 @@ def check_one(r, status, events):
         status[rid] = {"url": r["url"], "status": "unchecked", "message": "Automatic checking is off"}
         return
 
-    if entry is None or entry.get("url") != r["url"] or "approved_hash" not in entry:
+    if (entry is None or entry.get("url") != r["url"] or "approved_hash" not in entry
+            or (r.get("page") is None and "page_url" in entry)):
         try:
             approve(r, status)
             print(f"  NEW      {rid}: approved current version")

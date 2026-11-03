@@ -7,8 +7,8 @@ import shutil
 from html import escape
 
 from icons import topic_icon
-from common import (PAUSED, ROOT, SECTIONS, copy_path, load_resources, load_site,
-                    load_status)
+from common import (PAUSED, ROOT, SECTIONS, copy_path, effective_status, load_resources,
+                    load_site, load_status)
 
 OUT = ROOT / "_site"
 
@@ -48,7 +48,6 @@ h1{font:600 2rem/1.1 var(--serif);letter-spacing:-.02em;margin:0}
 .tab:active{transform:scale(.97)}
 .tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .tab[aria-selected=true]{background:var(--accent);color:var(--accent-ink)}
-.tab .n{font-weight:500;opacity:.75}
 .search{flex:1;min-width:200px;max-width:380px;margin-left:auto;position:relative}
 .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
 .search input{width:100%;font:inherit;padding:.6rem 1rem .6rem 2.5rem;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);transition:border-color .2s}
@@ -138,8 +137,8 @@ SEARCH_ICON = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stro
 
 def item_html(r, entry, files_used):
     rid = r["id"]
-    st = entry.get("status", "unchecked")
-    has_copy = copy_path(rid).exists()
+    st = effective_status(entry)
+    has_copy = copy_path(rid).exists() and st != "withdrawn"
     title = escape(r["title"])
     meta = [escape(r["source"])] if r.get("source") else []
     if has_copy or entry.get("kind") == "pdf" or r["url"].lower().endswith(".pdf"):
@@ -153,7 +152,7 @@ def item_html(r, entry, files_used):
         link = f'<a class="res" href="files/{rid}.pdf">{title}</a>'
         if st not in PAUSED:
             meta.append(f'<a href="{escape(r["url"])}" rel="noopener">Original ↗</a>')
-    elif st in PAUSED:
+    elif st in PAUSED or st == "withdrawn":
         link = f'<span class="res off">{title}</span>'
         review = '<span class="review" title="Temporarily unavailable while this resource is being reviewed">Under review</span>'
     else:
@@ -177,7 +176,7 @@ def main():
         if not items:
             continue
         tabs.append(f'<button class="tab" role="tab" id="tab-{key}" data-t="{key}" aria-controls="{key}">'
-                    f'<span class="l">{heading}</span><span class="n">{len(items)}</span></button>')
+                    f'<span class="l">{heading}</span></button>')
         groups = []
         for i, topic in enumerate(dict.fromkeys(r["topic"] for r in items)):
             in_topic = [r for r in items if r["topic"] == topic]

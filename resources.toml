@@ -14,13 +14,18 @@
 #    url      – the web address
 #    source   – (optional) who publishes it, shown in grey
 #    note     – (optional) a short line of extra explanation
+#    page     – (optional) the web page the file is posted on, e.g. the
+#               government page that links to a PDF. That page is checked
+#               daily too: if it changes you are asked to review, and if it
+#               stops linking to the file (a sign the file was replaced or
+#               withdrawn) the resource is hidden until you approve it.
 #    check    – (optional) "auto" (default) or "off". Use "off" for
 #               websites that block automatic checking.
 #    icon     – (optional) the small picture beside the topic heading.
 #               Chosen automatically from the topic name; set it on any
 #               one resource in a topic to override. Choices: drop, heart,
 #               heart-pulse, pulse, child, dumbbell, bone, ribbon, pill,
-#               apple, lungs, brain, stethoscope, document
+#               apple, lungs, brain, stethoscope, syringe, document
 #    id       – (optional) a short unique name. If left out it is made
 #               from the title. Used for saved copies and approvals.
 #
@@ -75,6 +80,14 @@ title   = "Calcium calculator"
 source  = "Osteoporosis Canada"
 note    = "Find out how much calcium you get from your diet."
 url     = "https://osteoporosis.ca/calcium-calculator/"
+
+[[resource]]
+section = "patients"
+topic   = "Immunizations"
+title   = "Ontario's routine immunization schedule (poster)"
+source  = "Ontario Ministry of Health"
+url     = "https://www.ontario.ca/files/2024-01/moh-immunization-poster-lifespan-en-2024-01-18.pdf"
+page    = "https://www.ontario.ca/page/ontarios-routine-immunization-schedule"
 
 [[resource]]
 section = "patients"
@@ -164,6 +177,7 @@ topic   = "Immunizations"
 title   = "Publicly Funded Immunization Schedules for Ontario"
 source  = "Ministry of Health (Ontario)"
 url     = "https://www.ontario.ca/files/2024-01/moh-publicly-funded-immunization-schedule-en-2024-01-23.pdf"
+page    = "https://www.ontario.ca/page/vaccine-resources-professionals"
 
 [[resource]]
 section = "clinicians"
