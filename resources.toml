@@ -84,6 +84,12 @@ source  = "Ontario Health (Cancer Care Ontario)"
 url     = "https://www.cancercareontario.ca/en/types-of-cancer/breast-cancer/screening/ages-40-49-what-you-need-to-know"
 check   = "off"   # this site blocks automatic checking
 
+[[resource]]
+section = "patients"
+topic   = "Fever in Children"
+title   = "Fever"
+source  = "CHEO"
+url     = "https://outreach.cheo.on.ca/document/677"
 
 # ----------------------------------------------------------------------
 #  FOR CLINICIANS
