@@ -1,0 +1,223 @@
+PEER
+Simplified Cardiovascular
+Decision Aid
+FAQ
+Languages:
+English (EN)
+Français (FR)
+1. Estimate your risk
+([selected_score_output_percent] - hidden calculation) 8.1
+([framingham_female] - hidden calculation) 0.04749482005550254
+([framingham_male] - hidden calculation) 0.08057051448796526
+([benefit_lookup] - hidden calculation) 0
+([benefit_output] - hidden calculation) 8.1
+Where do you live?
+Canada (Framingham) US - Preferred Model (PREVENT) US - Traditional Model (ASCVD) Europe (SCORE2/SCORE2-OP) New Zealand (PREDICT)
+What country do you live in?
+Albania Algeria Armenia Austria Azerbaijan Belarus Belgium Bosnia and Herzegovina Bulgaria Croatia Cyprus Czech Republic Denmark Egypt Estonia Finland France Georgia Germany Greece Hungary Iceland Ireland Israel Italy Kazakhstan Kyrgyzstan Latvia Lebanon Libya Lithuania Luxembourg Malta Montenegro Morocco Netherlands North Macedonia Norway Poland Portugal Republic of Moldova Romania Russia San Marino Serbia Slovakia Slovenia Spain Sweden Switzerland Syria Tunisia Turkey Ukraine United Kingdom Uzbekistan
+How old are you?
+years
+How old are you?
+years
+Note: The risk prediction model used for New Zealand is not validated in those >75 years old.
+What is your sex?
+Male Female
+Do you identify as Black?
+No Yes
+What is your ethnicity?
+European Indian New Zealand Māori Pacific Asian
+What is your deprivation quintile?
+1 - No deprivation characteristics 2 3 4 5 - Significant socioeconomic deprivation
+For detailed information, see page two of the NZDep2013 brief flyer (PDF) or visit the website.
+Do you have a family history of heart disease or stroke?
+No Yes
+Do you currently smoke?
+No Yes
+Do you currently smoke?
+Never No, but I did before Yes
+Do you have diabetes?
+No Yes
+Click here for a decision aid that estimates additional diabetes-related outcomes.
+Note : The risk prediction model used for Europe in patients <70 years old is not validated in those with diabetes.
+Do you have atrial fibrillation?
+No Yes
+What is your systolic blood pressure?
+mmHg
+Do you take medications for blood pressure?
+No Yes
+Do you take acetylsalicylic acid ("Baby Aspirin") or blood thinners (like warfarin)?
+No Yes
+Do you take cholesterol medications?
+No Yes
+Are you currently taking a statin?
+No Yes
+What is your total cholesterol?
+mmol/L
+What is your HDL cholesterol?
+mmol/L
+Note: This decision aid cannot be used to predict cardiovascular risk in people with a non-HDL-cholesterol of 5.8 mmol/L or greater (>224 mg/dL), as it will substantially under-estimate the risk of cardiovascular events in these people.
+Note: A non-HDL-cholesterol concentration above 6.5 mmol/L (≥251 mg/dL) may indicate familial hypercholesterolemia (inherited form of high cholesterol from birth). This decision aid substantially under-estimates the risk of cardiovascular events in patients with familial hypercholesterolemia. As a safety measure, a concentration this high disables the tool.
+([ascvd_nb_female] - hidden calculation) 0.013656432010063946
+([ascvd_b_female] - hidden calculation) 0.022507746047819244
+([ascvd_b_male] - hidden calculation) 0.053981573900333535
+([ascvd_nb_male] - hidden calculation) 0.03373641220385626
+([predict_female] - hidden calculation) 0.008834811492260508
+([predict_male] - hidden calculation) 0.019732088594590858
+([score2_female_uncalibrated] - hidden calculation) 0.009253227117467455
+([scale1] - hidden calculation) -0.738
+([scale2] - hidden calculation) 0.7019
+([score2_female] - hidden calculation) 0.017764837606335404
+([score2_male_uncalibrated] - hidden calculation) 0.01819535304236153
+([scale1_male] - hidden calculation) -0.5699
+([scale2_male] - hidden calculation) 0.7476
+([score2_male] - hidden calculation) 0.02808327210185646
+([score2op_female] - hidden calculation) 0.018260800006373645
+([scale1op_female] - hidden calculation) -0.52
+([scale2op_female] - hidden calculation) 1.01
+([score2op_female_calibrated] - hidden calculation) 0.010472576368030007
+([score2op_male] - hidden calculation) 0.0434885687383858
+([scale1op_male] - hidden calculation) -0.34
+([scale2op_male] - hidden calculation) 1.19
+([score2op_male_calibrated] - hidden calculation) 0.01736420432895236
+([score_title] - hidden calculation) Framingham
+([alpha] - hidden calculation) -0.0302
+([k] - hidden calculation) 0.9
+([ckd_epi_scr] - hidden calculation) 0.7916760913820402
+([ckdepi_female] - hidden calculation) 1
+What is your eGFR?
+ml/min/1.73²
+What is your serum creatinine?
+umol/L
+eGFR (2021 CKD-EPI equation)
+122 ml/min/1.73m²
+([female_prevent] - hidden calculation) 0.02435426585282851
+([male_prevent] - hidden calculation) 0.03243036629303349
+What is your social deprivation index?
+1 to 3
+4 to 6
+7 to 10
+Not available
+Do you have access to urine albumin-to-creatinine ratio and hemoglobin A1c values?
+No
+Yes
+What is your albumin-to-creatinine ratio?
+mg/mmol
+Not available
+What is your hemoglobin A1c?
+%
+Not available
+([prevent_male_all] - hidden calculation) 0.04147916512788379
+([prevent_female_all] - hidden calculation) 0.03234693571484674
+Wondering why family history is not included?
+Please s ee the FAQ
+10-year risk of cardiovascular disease
+(heart attack, stroke, or death from cardiovascular disease)
+5-year risk of cardiovascular disease
+(heart attack or stroke (fatal or non-fatal), heart failure, angina, transient ischemic attack, or peripheral vascular disease)
+10-year risk of cardiovascular disease
+(heart attack or stroke (fatal or non-fatal), or heart failure)
+10-year risk of cardiovascular disease
+(heart attack or stroke (fatal or non-fatal), heart failure, angina, or intermittent claudication)
+10-year risk of cardiovascular disease
+(heart attack or stroke (fatal or non-fatal))
+Your risk 8.1%
+Your risk 8.1%    With treatment 8.1%
+8.1%
+No Event
+Event
+Ezetimibe has minimal evidence in primary prevention
+(risk reduction from secondary prevention trial used)
+PCSK9 inhibitors have minimal evidence in primary prevention
+(risk reduction from secondary prevention trial used)
+Fibrates do not further reduce cardiovascular risk in patients taking a statin
+2. Choose your treatments
+Lifestyle options
+Mediterranean diet
+Mediterranean diet resource
+Physical activity
+Physical activity prescription
+Smoking cessation
+Provincial smoking cessation programs
+Medication options (only select one)
+These options have clear and direct evidence for primary prevention
+Statin (low to moderate dose)
+Statin (high dose)
+Single blood pressure medication (thiazide, ACEI/ARB, or CCB)
+Non-statin options not recommended for primary prevention in our guideline
+Ezetimibe
+PCSK9 inhibitor
+Fibrates
+No treatment selected
+Print
+EMR Note/Share Link
+EMR Note/Share Link
+I have used the PEER Cardiovascular Decision Aid available at https://peerevidence.ca/ to discuss medication options with the patient to reduce their risk of cardiovascular events.
+Based on the Framingham risk score, we estimated their risk of cardiovascular events to be 8.1% over the next 10 years.
+After discussing the benefits and harms of available options, and eliciting patient preferences, we have decided not to make any changes.
+([years] - hidden calculation) 10
+PEER Simplified Lipid Guidelines
+Patient Handout
+1-
+Page Logic
+1 Show items with fh_hide (if 1==1, showHideTags: show tags: (fh_hide))
+2 Default hides (if 1==1, showHideTags: show tags: (no_adrs, no_lifestyle) hide tags: (fh_warning, fh_soft_warning, framingham, ascvd, predict, score2, score2op, dm_warning, nz_age, pa, sc, md, hide, adrs, sc_option, diabetes, note_ezetimibe, note_pcsk9i, note_fibrates, prevent, prevent_all))
+3 Enable all treatments (if 1==1, performActions: [high_statin]->enable, [low_mod_statin]->enable, [ezetimibe]->enable, [PCSK9i]->enable, [smoking_cessation]->enable, [bp_tx]->enable, [fibrates]->enable)
+4 FH soft warning (if ((parseFloat([total_cholesterol])-parseFloat([HDL]))>=5.8)
+&&
+((parseFloat([total_cholesterol])-parseFloat([HDL]))<=6.5), showHideTags: show tags: (fh_soft_warning))
+5 disable all but low mod statin (if [low_mod_statin]==1, performActions: [high_statin]->disable, [ezetimibe]->disable, [PCSK9i]->disable, [fibrates]->disable, [bp_tx]->disable)
+6 disable all but high statin (if [high_statin]==1, performActions: [low_mod_statin]->disable, [ezetimibe]->disable, [PCSK9i]->disable, [bp_tx]->disable, [fibrates]->disable)
+7 disable all but ezetimibe (if [ezetimibe]==1, performActions: [low_mod_statin]->disable, [high_statin]->disable, [PCSK9i]->disable, [bp_tx]->disable, [fibrates]->disable)
+8 disable all but pcsk9i (if [PCSK9i]==1, performActions: [low_mod_statin]->disable, [high_statin]->disable, [ezetimibe]->disable, [bp_tx]->disable, [fibrates]->disable)
+9 Show framingham (if [primary_select]==0, showHideTags: show tags: (framingham))
+10 Show predict (if [primary_select]==2, showHideTags: show tags: (predict))
+11 Show score2 (if [primary_select]==3, showHideTags: show tags: (score2, score2op))
+12 Enable smoking cessation if smoker (if (([smoker]==1) && !(([primary_select]==2)))
+||
+(([predict_smoker]==2) && ([primary_select]==2)), performActions: [smoking_cessation]->enable)
+13 Disable smoking if neither condition met (if !((([smoker]==1) && !(([primary_select]==2)))
+||
+(([predict_smoker]==2) && ([primary_select]==2))), performActions: [smoking_cessation]->disable)
+14 Diabetes validation warning (if ([primary_select]==3) &&
+([age]<70) &&
+([diabetes]==1), showHideTags: show tags: (dm_warning))
+15 NZ age hide (if ([age]>75) && ([primary_select]==2), showHideTags: show tags: (nz_age))
+16 Show diet resource (if [mediterranean_diet]==1, showHideTags: show tags: (md))
+17 Show smoking resource (if ([smoking_cessation]==1) &&
+([primary_select]==0), showHideTags: show tags: (sc))
+18 Show physical activity resource (if [physical_activity]==1, showHideTags: show tags: (pa))
+19 Show ADRs (if ([low_mod_statin]+[high_statin]+[ezetimibe]+[PCSK9i]+[fibrates]+[bp_tx])>0, showHideTags: show tags: (adrs) hide tags: (no_adrs))
+20 Show smoking cessation if smoker (if (([smoker]==1) && !(([primary_select]==2)))
+||
+(([predict_smoker]==2) && ([primary_select]==2)), showHideTags: show tags: (sc_option))
+21 Hide "no lifestyle options" (if ([mediterranean_diet]==1)
+||
+([physical_activity]==1)
+||
+([smoking_cessation]==1), showHideTags: hide tags: (no_lifestyle))
+22 Show diabetes DA link (if [diabetes]==1, showHideTags: show tags: (diabetes))
+23 disable all but fibrates (if [fibrates]==1, performActions: [bp_tx]->disable, [high_statin]->disable, [low_mod_statin]->disable, [ezetimibe]->disable, [PCSK9i]->disable)
+24 disable all but bp (if [bp_tx]==1, performActions: [ezetimibe]->disable, [PCSK9i]->disable, [fibrates]->disable, [high_statin]->disable, [low_mod_statin]->disable)
+25 If SBP<130 then disable htn tx (if [SBP]<130, performActions: [bp_tx]->disable)
+26 Show prevent all variables (if (parseFloat([prevent_model])==1) && (parseFloat([primary_select])==1), showHideTags: show tags: (prevent_all))
+27 Disable ACR (if [acr_missing]==1, performActions: [acr]->disable)
+28 Disable hemoglobin A1c (if [a1c_missing]==1, performActions: [a1c]->disable)
+29 Disable statin if already on statin (if ([primary_select]==1) && ([on_statin]==1), performActions: [low_mod_statin]->disableAlreadyTaking, [high_statin]->disableAlreadyTaking)
+30 Ezetimibe warning (if [ezetimibe]==1, showHideTags: show tags: (note_ezetimibe))
+31 PCSK9i warning (if [PCSK9i]==1, showHideTags: show tags: (note_pcsk9i))
+32 Fibrate warning (if [fibrates]==1, showHideTags: show tags: (note_fibrates))
+33 Re-enable acr and a1c (if 1==1, performActions: [acr]->enable, [a1c]->enable)
+34 Show PREVENT (if parseFloat([primary_select])==1, showHideTags: show tags: (prevent))
+35 Show ASCVD (if [primary_select]==4, showHideTags: show tags: (ascvd))
+36 FH warning (if (parseFloat([total_cholesterol])-parseFloat([HDL]))>6.5, showHideTags: show tags: (fh_warning) hide tags: (fh_soft_warning, fh_hide))
+37 Show your risk and hide with treatment by default (if 1==1, showHideTags: show tags: (no_treatment_selected) hide tags: (treatment_selected))
+38 Hide your risk and show with treatment if treatment selected (if [mediterranean_diet]==1 ||
+[physical_activity]==1 ||
+[smoking_cessation]==1 ||
+[low_mod_statin]==1 ||
+[high_statin]==1 ||
+[bp_tx]==1 ||
+[ezetimibe]==1 ||
+[PCSK9i]==1 ||
+[fibrates]==1
+, showHideTags: show tags: (treatment_selected) hide tags: (no_treatment_selected))

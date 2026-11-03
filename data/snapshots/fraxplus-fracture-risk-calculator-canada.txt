@@ -1,0 +1,139 @@
+Skip to main content
+Main navigation
+Home
+Online Calculation
+FRAXplus ®
+Paper Charts
+About
+FAQ
+References
+My FRAX ®
+English
+عربي
+հայերեն
+বাংলা
+简体中文
+中国传统的
+Hrvatski
+Čeština
+Dansk
+Nederlands NL
+Eesti
+Suomi
+Français
+ქართული
+Deutsch
+Ελληνικά
+Íslenska
+Bahasa Indonesia
+Italiano
+日本語
+한국인
+Lietuvių
+Norsk
+فارسی
+Polskie
+Português PT
+Română
+русский
+Српски
+Slovenský
+Español
+Svenska
+ไทย
+Türk
+Українська
+Ўзбек
+Risk factors
+For the clinical risk factors a yes or no response is asked for. If the field is left blank, then a "no" response is assumed. See also notes on risk factors
+The risk factors used are the following:
+Age
+The model accepts ages between 40 and 90 years. If ages below or above are entered, the program will compute probabilities at 40 and 90 years, respectively.
+Sex
+Male or female. Enter as appropriate.
+Weight
+This should be entered in kg or pounds (please select units)
+Height
+This should be entered in cm or inches (please select units)
+Previous fracture
+A previous fracture denotes more accurately a previous fracture in adult life occurring spontaneously, or a fracture arising from trauma which, in a healthy individual, would not have resulted in a fracture. Enter yes or no (see also notes on risk factors).
+Parent fractured hip
+This enquires for a history of hip fracture in the patient's mother or father. Enter yes or no.
+Current smoking
+Enter yes or no depending on whether the patient currently smokes tobacco (see also notes on risk factors).
+Glucocorticoids
+Enter yes if the patient is currently exposed to oral glucocorticoids or has been exposed to oral glucocorticoids for more than 3 months at a dose of prednisolone of 5mg daily or more (or equivalent doses of other glucocorticoids) (see also notes on risk factors).
+Rheumatoid arthritis
+Enter yes where the patient has a confirmed diagnosis of rheumatoid arthritis. Otherwise enter no (see also notes on risk factors).
+Secondary osteoporosis
+Enter yes if the patient has a disorder strongly associated with osteoporosis. These include type I (insulin-dependent) diabetes, osteogenesis imperfecta in adults, untreated long-standing hyperthyroidism, hypogonadism or premature menopause (<45 years), chronic malnutrition or malabsorption, chronic renal failure (dialysis independent) and chronic liver disease.
+Alcohol 3 or more units/day
+Enter yes if the patient takes 3 or more units of alcohol daily. A unit of alcohol varies slightly in different countries from 8-10g of alcohol. This is equivalent to a standard glass of beer (285ml), a single measure of spirits (30ml), a medium-sized glass of wine (120ml), or 1 measure of an aperitif (60ml) (see also notes on risk factors).
+Bone mineral density (BMD)
+In patients without a BMD test, the field should be left blank. If entering absolute BMD - Please select make of scanning equipment used and enter actual femoral neck BMD (in g/cm²). If entering T-score - Please select the T-score option and enter the T-score based on the NHANES III female reference data. See also notes on risk factors.
+Notes on risk factors
+Previous fracture
+A special situation pertains to a prior history of vertebral fracture. A fracture detected as a radiographic observation alone (a morphometric vertebral fracture) counts as a previous fracture. A prior clinical vertebral fracture or a hip fracture is an especially strong risk factor, and the probability of fracture may therefore be underestimated. A fracture within the past 2 years is a particularly strong risk factor for subsequent fracture, and fracture probability is also likely to be underestimated with multiple prior fractures. Adjustments of FRAX ® probabilities for recency or number of prior fractures are available using FRAXplus ® .
+Smoking, alcohol, glucocorticoids
+These risk factors appear to have a dose-dependent effect, i.e. the higher the exposure, the greater the risk. Current FRAX ® computations assume average exposure and clinical judgment should be used for low or high exposures. FRAX ® probabilities can be adjusted using FRAXplus ® for exposure to higher-than-average doses of glucocorticoids.
+Rheumatoid arthritis (RA)
+RA is a risk factor for fracture. However, osteoarthritis is, if anything, protective. For this reason, reliance should not be placed on a patient's report of 'arthritis' unless there is clinical or laboratory evidence to support the diagnosis.
+Bone mineral density (BMD)
+The site and reference technology is DXA at the femoral neck. T-scores are based on the NHANES reference values for women age 20-29 years. The same absolute values are used in men.
+The FRAXplus ® website, its software and all content found on it are provided on an "as is" and "as available" basis. Osteoporosis Research Ltd (UK) does not give any warranties, whether express or implied, as to the suitability or usability of the website, its software or any of its content. The section of FRAXplus ® that performs post hoc adjustments of FRAX ® probabilities is a beta version.
+Some language validations are currently in progress. We welcome any feedback — please don’t hesitate to contact us directly. Support of translations will be acknowledged accordingly.
+Further updates will be provided on the FraxPlus website and via our official social media channels.
+The FRAX ® tool has been developed to evaluate fracture risk. It is based on individualised models that integrate the risks associated with clinical risk factors as well as bone mineral density (BMD) at the femoral neck.
+FRAX 1.4.9
+Sitemap
+Home
+Online calculation
+FRAXplus ®
+Paper Charts
+About
+FAQ
+References
+Docs
+Legal
+CE Mark
+Cookies policy
+Privacy Policy
+عربي
+հայերեն
+বাংলা
+简体中文
+中国传统的
+Hrvatski
+Čeština
+Dansk
+Nederlands NL
+English
+Eesti
+Suomi
+Français
+ქართული
+Deutsch
+Ελληνικά
+Íslenska
+Bahasa Indonesia
+Italiano
+日本語
+한국인
+Lietuvių
+Norsk
+فارسی
+Polskie
+Português PT
+Română
+русский
+Српски
+Slovenský
+Español
+Svenska
+ไทย
+Türk
+Українська
+Ўзбек
+©2008-2026 - Osteoporosis Research Ltd, UK
+FRAX ® and FRAXplus ® are registered trademarks.
+UDI: (01)05065010474000(8012)4.4

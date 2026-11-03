@@ -1,0 +1,13 @@
+# Basic information shown on the website. Edit freely.
+
+name     = "Dr. Edward Zhou"
+subtitle = "Family Physician"
+
+# Optional: clinic name / address / phone. Leave as "" to hide.
+clinic   = ""
+
+# Short welcome line shown under your name.
+intro    = "Health information and tools I recommend to my patients. Choose a topic below."
+
+# Shown at the bottom of every page.
+disclaimer = "This website is for general information only and does not replace advice from your own health care provider. It does not collect any personal information. If you have an emergency, call 911 or go to the nearest emergency department."

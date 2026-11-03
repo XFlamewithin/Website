@@ -1,0 +1,149 @@
+# ======================================================================
+#  RESOURCES — this is the only file you need to edit to add links.
+# ======================================================================
+#
+#  To add a resource, copy one of the blocks below, paste it where you
+#  want it to appear, and change the text. Each block starts with
+#  [[resource]]. Resources appear on the website in the same order as
+#  in this file, grouped by "section" and then by "topic".
+#
+#    section  – "patients" or "clinicians" (which part of the page)
+#    topic    – the heading it appears under (e.g. "Osteoporosis").
+#               Resources with the same topic are grouped together.
+#    title    – the text of the link
+#    url      – the web address
+#    source   – (optional) who publishes it, shown in grey
+#    note     – (optional) a short line of extra explanation
+#    check    – (optional) "auto" (default) or "off". Use "off" for
+#               websites that block automatic checking.
+#    id       – (optional) a short unique name. If left out it is made
+#               from the title. Used for saved copies and approvals.
+#
+#  Text must be inside "double quotes". Lines starting with # are notes
+#  for you and are ignored.
+# ======================================================================
+
+
+# ----------------------------------------------------------------------
+#  FOR PATIENTS
+# ----------------------------------------------------------------------
+
+[[resource]]
+section = "patients"
+topic   = "Iron deficiency"
+title   = "Iron supplements guide"
+source  = "Association of Ontario Midwives"
+url     = "https://www.ontariomidwives.ca/sites/default/files/IDA-Iron-supplements-guide-for-midwives-2024.pdf"
+
+[[resource]]
+section = "patients"
+topic   = "Cholesterol"
+title   = "The Portfolio Diet (infographic)"
+source  = "Canadian Cardiovascular Society"
+url     = "https://ccs.ca/wp-content/uploads/2023/11/Portfolio-Infographic-EN_7Nov2023.pdf"
+
+[[resource]]
+section = "patients"
+topic   = "Constipation in children"
+title   = "Constipation in children over 6 months"
+source  = "CHEO"
+url     = "https://outreach.cheo.on.ca/document/673"
+
+[[resource]]
+section = "patients"
+topic   = "Exercises"
+title   = "Knee arthritis exercise program"
+source  = "OrthoInfo (AAOS)"
+url     = "https://www.orthoinfo.org/globalassets/pdfs/2023-rehab_knee_10-16-23.pdf"
+
+[[resource]]
+section = "patients"
+topic   = "Exercises"
+title   = "Shoulder (rotator cuff) exercise program"
+source  = "OrthoInfo (AAOS)"
+url     = "https://www.orthoinfo.org/globalassets/pdfs/2017-rehab_shoulder.pdf"
+
+[[resource]]
+section = "patients"
+topic   = "Osteoporosis"
+title   = "Calcium calculator"
+source  = "Osteoporosis Canada"
+note    = "Find out how much calcium you get from your diet."
+url     = "https://osteoporosis.ca/calcium-calculator/"
+
+[[resource]]
+section = "patients"
+topic   = "Breast cancer screening"
+title   = "Screening at ages 40 to 49: what you need to know"
+source  = "Ontario Health (Cancer Care Ontario)"
+url     = "https://www.cancercareontario.ca/en/types-of-cancer/breast-cancer/screening/ages-40-49-what-you-need-to-know"
+check   = "off"   # this site blocks automatic checking
+
+
+# ----------------------------------------------------------------------
+#  FOR CLINICIANS
+# ----------------------------------------------------------------------
+
+[[resource]]
+section = "clinicians"
+topic   = "Osteoporosis"
+title   = "FRAXplus fracture risk calculator (Canada)"
+source  = "FRAXplus"
+url     = "https://www.fraxplus.org/calculation-tool?country=19"
+
+[[resource]]
+section = "clinicians"
+topic   = "Osteoporosis"
+title   = "2023 Clinical Practice Guideline"
+source  = "Osteoporosis Canada"
+url     = "https://osteoporosis.ca/2023-clinical-practice-guideline/"
+
+[[resource]]
+section = "clinicians"
+topic   = "Dyslipidemia and cardiovascular risk"
+title   = "2021 Lipid Guidelines – pocket guide"
+source  = "Canadian Cardiovascular Society"
+url     = "https://ccs.ca/wp-content/uploads/2022/07/2022-Lipids-Gui-PG-EN.pdf"
+
+[[resource]]
+section = "clinicians"
+topic   = "Dyslipidemia and cardiovascular risk"
+title   = "CVD risk calculator / decision aid"
+source  = "PEER"
+url     = "https://decisionaid.ca/cvd/"
+
+[[resource]]
+section = "clinicians"
+topic   = "Anticoagulation"
+title   = "Warfarin: managing out-of-range INRs"
+source  = "Thrombosis Canada"
+url     = "https://thrombosiscanada.ca/clinical_guides/pdfs/45_65.pdf"
+
+[[resource]]
+section = "clinicians"
+topic   = "Anticoagulation"
+title   = "Perioperative management of patients on DOACs"
+source  = "Thrombosis Canada"
+url     = "https://thrombosiscanada.ca/clinical_guides/pdfs/PERIOPERATIVEMANAGEMENTOFPATIE_90.pdf"
+
+[[resource]]
+section = "clinicians"
+topic   = "Anticoagulation"
+title   = "Perioperative management of antiplatelet therapy"
+source  = "Thrombosis Canada"
+url     = "https://thrombosiscanada.ca/clinical_guides/pdfs/95_31.pdf"
+
+[[resource]]
+section = "clinicians"
+topic   = "Atrial fibrillation"
+title   = "SPARC – stroke and bleeding risk calculator"
+source  = "SPARC"
+url     = "https://www.sparctool.com/"
+
+[[resource]]
+section = "clinicians"
+topic   = "Colorectal cancer screening"
+title   = "Post-polypectomy surveillance recommendations"
+source  = "Ontario Health (Cancer Care Ontario)"
+url     = "https://www.cancercareontario.ca/sites/ccocancercare/files/derivative/CCCRecommendationsPostPolypectomySurveillanceTool.pdf"
+check   = "off"   # this site blocks automatic checking

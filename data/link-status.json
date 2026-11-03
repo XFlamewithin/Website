@@ -1,0 +1,161 @@
+{
+  "2021-lipid-guidelines-pocket-guide": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "f60959bab9f25d768e156941f828fbf5ba0a4de9aba0e54966889acf27d73345",
+    "copy": "files/2021-lipid-guidelines-pocket-guide.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://ccs.ca/wp-content/uploads/2022/07/2022-Lipids-Gui-PG-EN.pdf"
+  },
+  "2023-clinical-practice-guideline": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "47069a8bd0d28e7fbe3b5cc16f0f5ebda704b5a82792b4a41458c715417e0b5e",
+    "fail_count": 0,
+    "kind": "page",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://osteoporosis.ca/2023-clinical-practice-guideline/"
+  },
+  "calcium-calculator": {
+    "approved_at": "2026-11-03 02:36 UTC",
+    "approved_hash": "2f962702e3d977561ce512feb604c385df4dd620034cb11fa3ec209baa98efbd",
+    "fail_count": 0,
+    "kind": "page",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://osteoporosis.ca/calcium-calculator/"
+  },
+  "constipation-in-children-over-6-months": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "fce7fd8473bc26253ba7ca97674e85b0678d89b37a3681e162b076a4b4c88f4c",
+    "copy": "files/constipation-in-children-over-6-months.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://outreach.cheo.on.ca/document/673"
+  },
+  "cvd-risk-calculator-decision-aid": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "c9c284a6f18beb7e3af1f9b68efa53398c22ebf3dc703adeed4c52f7986d9480",
+    "fail_count": 0,
+    "kind": "page",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://decisionaid.ca/cvd/"
+  },
+  "fraxplus-fracture-risk-calculator-canada": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "d05418cdcb416d9d233ca291532d12e492729f9f3423f92ade06c7ee280480e0",
+    "fail_count": 0,
+    "kind": "page",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://www.fraxplus.org/calculation-tool?country=19"
+  },
+  "iron-supplements-guide": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "06b3fb720afb6a077a27001db8b43b19e8ed279d504f50309725e6c22c4faff3",
+    "copy": "files/iron-supplements-guide.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://www.ontariomidwives.ca/sites/default/files/IDA-Iron-supplements-guide-for-midwives-2024.pdf"
+  },
+  "knee-arthritis-exercise-program": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "d844657fe62dffb9cb1d13d86ea47ce5fdae072f99ba83a303f19ab54fe5261a",
+    "copy": "files/knee-arthritis-exercise-program.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://www.orthoinfo.org/globalassets/pdfs/2023-rehab_knee_10-16-23.pdf"
+  },
+  "perioperative-management-of-antiplatelet-therapy": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "bbe8d827c8ca18e623b316d3790aae15d61f170460f840782de78def8243a409",
+    "copy": "files/perioperative-management-of-antiplatelet-therapy.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://thrombosiscanada.ca/clinical_guides/pdfs/95_31.pdf"
+  },
+  "perioperative-management-of-patients-on-doacs": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "130545c5c38ec340bc22e8c93590b454adf68459cc0e057ef484b554fd3e18a9",
+    "copy": "files/perioperative-management-of-patients-on-doacs.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://thrombosiscanada.ca/clinical_guides/pdfs/PERIOPERATIVEMANAGEMENTOFPATIE_90.pdf"
+  },
+  "post-polypectomy-surveillance-recommendations": {
+    "message": "Automatic checking is off",
+    "status": "unchecked",
+    "url": "https://www.cancercareontario.ca/sites/ccocancercare/files/derivative/CCCRecommendationsPostPolypectomySurveillanceTool.pdf"
+  },
+  "screening-at-ages-40-to-49-what-you-need-to-know": {
+    "message": "Automatic checking is off",
+    "status": "unchecked",
+    "url": "https://www.cancercareontario.ca/en/types-of-cancer/breast-cancer/screening/ages-40-49-what-you-need-to-know"
+  },
+  "shoulder-rotator-cuff-exercise-program": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "56ce5cec30f83d92a6f7640dc2482095d586eed89d32e0cc835c3287428c9088",
+    "copy": "files/shoulder-rotator-cuff-exercise-program.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://www.orthoinfo.org/globalassets/pdfs/2017-rehab_shoulder.pdf"
+  },
+  "sparc-stroke-and-bleeding-risk-calculator": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "f80e32c54d7e592021d1661df5c6794434bbb424d62afbc50cdff9b3f6eff6f6",
+    "fail_count": 0,
+    "kind": "page",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://www.sparctool.com/"
+  },
+  "the-portfolio-diet-infographic": {
+    "approved_at": "2026-11-03 02:35 UTC",
+    "approved_hash": "9fc1bcf4d10e331ff91d992479c111707090cdbd71161c8f5e19bac6b30cda1b",
+    "copy": "files/the-portfolio-diet-infographic.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://ccs.ca/wp-content/uploads/2023/11/Portfolio-Infographic-EN_7Nov2023.pdf"
+  },
+  "warfarin-managing-out-of-range-inrs": {
+    "approved_at": "2026-11-03 02:36 UTC",
+    "approved_hash": "3bf6b4869a1e86461d371c93344e41e8d8fd32f96bb9db1991a2109cac6cee97",
+    "copy": "files/warfarin-managing-out-of-range-inrs.pdf",
+    "fail_count": 0,
+    "kind": "pdf",
+    "last_checked": "2026-11-03 02:36 UTC",
+    "message": "",
+    "status": "ok",
+    "url": "https://thrombosiscanada.ca/clinical_guides/pdfs/45_65.pdf"
+  }
+}
