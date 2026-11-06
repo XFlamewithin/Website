@@ -118,6 +118,13 @@ url     = "https://caringforkids.cps.ca/handouts/healthy-living/feeding_your_bab
 
 [[resource]]
 section = "clinicians"
+topic   = "Specialist Directory"
+title   = "Directory of Chinese speaking specialists in the GTA"
+source  = "CPSO"
+url     = "https://specialists.edwardzhou.fyi/"
+
+[[resource]]
+section = "clinicians"
 topic   = "Osteoporosis"
 title   = "FRAXplus fracture risk calculator (Canada)"
 source  = "FRAXplus"
@@ -187,10 +194,3 @@ title   = "Post-polypectomy surveillance recommendations"
 source  = "Ontario Health (Cancer Care Ontario)"
 url     = "https://www.cancercareontario.ca/sites/ccocancercare/files/derivative/CCCRecommendationsPostPolypectomySurveillanceTool.pdf"
 check   = "off"   # this site blocks automatic checking
-
-[[resource]]
-section = "clinicians"
-topic   = "Specialist Directory"
-title   = "Directory of Chinese speaking specialists in the GTA"
-source  = "CPSO"
-url     = "https://specialists.edwardzhou.fyi/"
