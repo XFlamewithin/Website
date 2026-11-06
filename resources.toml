@@ -187,3 +187,10 @@ title   = "Post-polypectomy surveillance recommendations"
 source  = "Ontario Health (Cancer Care Ontario)"
 url     = "https://www.cancercareontario.ca/sites/ccocancercare/files/derivative/CCCRecommendationsPostPolypectomySurveillanceTool.pdf"
 check   = "off"   # this site blocks automatic checking
+
+[[resource]]
+section = "clinicians"
+topic   = "Specialist Directory"
+title   = "Directory of Chinese speaking specialists in the GTA"
+source  = "CPSO"
+url     = "specialists.edwardzhou.fyi"
