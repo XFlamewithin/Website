@@ -85,6 +85,27 @@ source  = "Cancer Care Ontario"
 url     = "https://www.cancercareontario.ca/en/types-of-cancer/breast-cancer/screening/ages-40-49-what-you-need-to-know"
 check   = "off"   # this site blocks automatic checking
 
+[[resource]]
+section = "adults"
+topic   = "Vertigo (BPPV)"
+title   = "Home Epley manoeuvre to treat BPPV: left ear"
+source  = "University Hospital Southampton NHS Foundation Trust"
+url     = "https://www.uhs.nhs.uk/Media/UHS-website-2019/Patientinformation/Audiology/Home-Epley-manoeuvre-to-treat-BPPV-left-ear-2782-PIL.pdf"
+
+[[resource]]
+section = "adults"
+topic   = "Vertigo (BPPV)"
+title   = "Home Epley manoeuvre to treat BPPV: right ear"
+source  = "University Hospital Southampton NHS Foundation Trust"
+url     = "https://www.uhs.nhs.uk/Media/UHS-website-2019/Patientinformation/Audiology/Home-Epley-manoeuvre-to-treat-BPPV-right-ear-2783-PIL.pdf"
+
+[[resource]]
+section = "adults"
+topic   = "Vertigo (BPPV)"
+title   = "Brandt-Daroff exercises to treat BPPV"
+source  = "University Hospital Southampton NHS Foundation Trust"
+url     = "https://www.uhs.nhs.uk/Media/UHS-website-2019/Patientinformation/Audiology/Brandt-Daroff-exercises-to-treat-BPPV-2839-PIL.pdf"
+
 
 # ----------------------------------------------------------------------
 #  FOR CHILDREN
@@ -187,10 +208,3 @@ title   = "Post-polypectomy surveillance recommendations"
 source  = "Ontario Health (Cancer Care Ontario)"
 url     = "https://www.cancercareontario.ca/sites/ccocancercare/files/derivative/CCCRecommendationsPostPolypectomySurveillanceTool.pdf"
 check   = "off"   # this site blocks automatic checking
-
-[[resource]]
-section = "clinicians"
-topic   = "Specialist Directory"
-title   = "Directory of Chinese speaking specialists in the GTA"
-source  = "College of Physicians and Surgeons of Ontario"
-url     = "https://specialists.edwardzhou.fyi/"
