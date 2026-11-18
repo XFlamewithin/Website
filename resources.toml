@@ -106,13 +106,6 @@ title   = "Brandt-Daroff exercises to treat BPPV"
 source  = "University Hospital Southampton NHS Foundation Trust"
 url     = "https://www.uhs.nhs.uk/Media/UHS-website-2019/Patientinformation/Audiology/Brandt-Daroff-exercises-to-treat-BPPV-2839-PIL.pdf"
 
-[[resource]]
-section = "adults"
-topic   = "Lab tests"
-title   = "Non-OHIP billable test list (2025)"
-url     = "https://www.ndh.on.ca/wp-content/uploads/2025/07/NON-OHIP-Billable-Test-2025.pdf"
-
-
 # ----------------------------------------------------------------------
 #  FOR CHILDREN
 # ----------------------------------------------------------------------
@@ -214,3 +207,9 @@ title   = "Post-polypectomy surveillance recommendations"
 source  = "Ontario Health (Cancer Care Ontario)"
 url     = "https://www.cancercareontario.ca/sites/ccocancercare/files/derivative/CCCRecommendationsPostPolypectomySurveillanceTool.pdf"
 check   = "off"   # this site blocks automatic checking
+
+[[resource]]
+section = "clinicians"
+topic   = "Lab tests"
+title   = "Non-OHIP billable test list (2025)"
+url     = "https://www.ndh.on.ca/wp-content/uploads/2025/07/NON-OHIP-Billable-Test-2025.pdf"
