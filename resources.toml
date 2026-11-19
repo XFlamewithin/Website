@@ -106,6 +106,15 @@ title   = "Brandt-Daroff exercises to treat BPPV"
 source  = "University Hospital Southampton NHS Foundation Trust"
 url     = "https://www.uhs.nhs.uk/Media/UHS-website-2019/Patientinformation/Audiology/Brandt-Daroff-exercises-to-treat-BPPV-2839-PIL.pdf"
 
+[[resource]]
+section = "adults"
+topic   = "Mental health"
+title   = "A guide to finding individual therapy for adults"
+id      = "finding-therapy-adults"
+source  = "Toronto Western Family Health Team (UHN)"
+url     = "https://www.uhn.ca"   # placeholder: replace with the original guide's address
+check   = "off"   # saved copy is served from files/; original address not known
+
 # ----------------------------------------------------------------------
 #  FOR CHILDREN
 # ----------------------------------------------------------------------
